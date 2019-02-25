@@ -1,0 +1,18 @@
+.exchangePage {
+  > div {
+    background: linear-gradient(274deg, #113ba3, #33c1e1);
+  }
+  > button {
+    float: right;
+    margin-top: 10px;
+    background-color: #113ba3;
+    padding: 12px 15px;
+    color: white;
+    font-weight: bold;
+    &[disabled] {
+      background-color: gray;
+      pointer-events: none;
+      cursor: not-allowed;
+    }
+  }
+}

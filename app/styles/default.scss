@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans');
-
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700');
 @import "~styles/variables.scss";
 
 * {
@@ -25,7 +24,16 @@ h1 {
 
 a {
   text-decoration: none;
-  &:hover{
+  &:hover {
     text-decoration: none;
   }
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

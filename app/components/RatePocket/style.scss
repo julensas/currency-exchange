@@ -1,0 +1,11 @@
+.ratePocket {
+  height: 150px;
+  display: block;
+  position: relative;
+  .rate {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: white;
+  }
+}

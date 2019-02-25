@@ -1,0 +1,14 @@
+.bottomControls {
+  list-style: none;
+  > li {
+    display: inline-block;
+    margin: 0 5px;
+    font-weight: normal;
+    color: white;
+    &:global(.active) {
+      > button {
+        font-weight: bold;
+      }
+    }
+  }
+}

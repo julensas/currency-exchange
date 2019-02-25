@@ -1,0 +1,18 @@
+.basePocket {
+  height: 150px;
+  display: block;
+  position: relative;
+  .balance {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: white;
+  }
+  .error {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    color: #ff8d8d;
+    font-weight: bold;
+  }
+}

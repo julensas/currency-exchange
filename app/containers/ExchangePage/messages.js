@@ -9,8 +9,8 @@ import { defineMessages } from 'react-intl';
 export const scope = 'app.containers.ExchangePage';
 
 export default defineMessages({
-  header: {
-    id: `${scope}.header`,
-    defaultMessage: 'This is the ExchangePage container!',
+  exchange: {
+    id: `${scope}.exchange`,
+    defaultMessage: 'Exchange',
   },
 });

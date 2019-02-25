@@ -6,7 +6,7 @@ const commonHeaders = {
 };
 
 export const Api = axios.create({
-  baseURL: 'https://openexchangerates.org/api/',
+  baseURL: 'api/',
   responseType: 'json',
   headers: commonHeaders,
 });

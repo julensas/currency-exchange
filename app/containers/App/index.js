@@ -15,10 +15,11 @@ import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 // Import global styles
 import 'styles/default.scss';
+import style from './style.scss';
 
 export default function App() {
   return (
-    <div>
+    <div className={style.app}>
       <Switch>
         <Route exact path="/" component={ExchangePage} />
         <Route component={NotFoundPage} />
