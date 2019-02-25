@@ -23,9 +23,8 @@ export function* listenToRateTask(base) {
       yield call(delay, 10000);
       const params = new URLSearchParams();
       params.append('base', base);
-      // const { data } = yield call(Api.get, 'latest.json', { params });
-      // yield put({ type: C.FETCH_RATES_SUCCESS, payload: data });
-      console.log('new rates', base);
+      const { data } = yield call(Api.get, 'latest.json', { params });
+      yield put({ type: C.FETCH_RATES_SUCCESS, payload: data });
     }
   } catch (e) {
     yield put({ type: C.FETCH_RATES_FAIL, payload: e });
