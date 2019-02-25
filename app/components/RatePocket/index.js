@@ -40,7 +40,11 @@ class RatePocket extends React.Component {
           </span>
         )}
         <Currency currency={currency.code} />
-        <Input value={Math.abs(value)} onInputChange={this.onChange} />
+        <Input
+          name="rate"
+          value={Math.abs(value)}
+          onInputChange={this.onChange}
+        />
       </div>
     );
   }

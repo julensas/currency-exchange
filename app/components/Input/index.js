@@ -13,11 +13,13 @@ class Input extends React.Component {
   onChange = val => this.props.onInputChange(val > 0 ? val * -1 : val);
 
   render() {
-    const { value } = this.props;
+    const { value, name } = this.props;
     return (
       <CurrencyInput
         value={value}
         thousandSeparator=""
+        inputType="number"
+        name={name}
         onChange={this.onChange}
         allowNegative
         className={style.input}
@@ -29,6 +31,7 @@ class Input extends React.Component {
 Input.propTypes = {
   onInputChange: PropTypes.func.isRequired,
   value: PropTypes.any.isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default Input;
