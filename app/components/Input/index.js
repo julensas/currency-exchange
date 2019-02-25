@@ -18,7 +18,7 @@ class Input extends React.Component {
       <CurrencyInput
         value={value}
         thousandSeparator=""
-        inputType="number"
+        inputType="tel"
         name={name}
         onChange={this.onChange}
         allowNegative
