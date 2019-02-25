@@ -124,7 +124,8 @@ export class ExchangePage extends React.Component {
                 isLoading={isLoading}
                 rate={rates[currency.code]}
                 baseCurrencySymbol={
-                  availableCurrencies.find(c => c.code === (base || 'USD')).symbol
+                  availableCurrencies.find(c => c.code === (base || 'USD'))
+                    .symbol
                 }
                 value={value * (rates[currency.code] || 1)}
               />
@@ -157,7 +158,7 @@ const mapStateToProps = createStructuredSelector({
   exchange: makeSelectExchangePage(),
 });
 
-function mapDispatchToProps(dispatch) {
+export function mapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators(actions, dispatch),
   };

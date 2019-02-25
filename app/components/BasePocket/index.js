@@ -41,7 +41,7 @@ class BasePocket extends React.Component {
           </span>
         )}
         <Currency currency={currency.code} />
-        <Input name="base" value={value} onInputChange={onInputChange} />
+        <Input value={value} onInputChange={onInputChange} />
       </div>
     );
   }

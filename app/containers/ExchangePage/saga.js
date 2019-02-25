@@ -1,10 +1,10 @@
-import { takeEvery, take, call, put, fork, cancel } from 'redux-saga/effects';
+import { takeLatest, take, call, put, fork, cancel } from 'redux-saga/effects';
 import { delay } from 'redux-saga';
 
 import { Api } from 'utils/api';
 import * as C from './constants';
 
-function* fetchRates({ payload }) {
+export function* fetchRates({ payload }) {
   try {
     yield put({ type: C.STOP_LISTEN });
     const params = new URLSearchParams();
@@ -40,6 +40,6 @@ export function* listenToRate({ payload }) {
 // Individual exports for testing
 export default function* exchangePageSaga() {
   // See example in containers/HomePage/saga.js
-  yield takeEvery(C.FETCH_RATES, fetchRates);
-  yield takeEvery(C.LISTEN_TO_RATES, listenToRate);
+  yield takeLatest(C.FETCH_RATES, fetchRates);
+  yield takeLatest(C.LISTEN_TO_RATES, listenToRate);
 }

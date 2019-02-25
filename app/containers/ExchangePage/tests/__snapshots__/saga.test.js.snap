@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fetchRates Saga should call the GET_DATA_FAIL action if the response errors 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "type": "app/ExchangePage/STOP_LISTEN",
+    },
+    "channel": null,
+  },
+}
+`;
+
+exports[`fetchRates Saga should call the GET_DATA_FAIL action if the response errors 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      "latest.json",
+      Object {
+        "params": URLSearchParams {
+          Symbol(impl): URLSearchParamsImpl {
+            "_list": Array [
+              Array [
+                "base",
+                "USD",
+              ],
+            ],
+            "_url": null,
+            Symbol(wrapper): [Circular],
+          },
+        },
+      },
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`fetchRates Saga should dispatch the GET_DATA_SUCCESS action if it requests the data successfully 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "type": "app/ExchangePage/STOP_LISTEN",
+    },
+    "channel": null,
+  },
+}
+`;
+
+exports[`fetchRates Saga should dispatch the GET_DATA_SUCCESS action if it requests the data successfully 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      "latest.json",
+      Object {
+        "params": URLSearchParams {
+          Symbol(impl): URLSearchParamsImpl {
+            "_list": Array [
+              Array [
+                "base",
+                "USD",
+              ],
+            ],
+            "_url": null,
+            Symbol(wrapper): [Circular],
+          },
+        },
+      },
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`listenToRate Saga should take the STOP_LISTEN and cancel listenTask 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "FORK": Object {
+    "args": Array [
+      "USD",
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`listenToRateTask Saga should call the GET_DATA_FAIL action if the response errors 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      10000,
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`listenToRateTask Saga should call the GET_DATA_FAIL action if the response errors 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      "latest.json",
+      Object {
+        "params": URLSearchParams {
+          Symbol(impl): URLSearchParamsImpl {
+            "_list": Array [
+              Array [
+                "base",
+                "[object Object]",
+              ],
+            ],
+            "_url": null,
+            Symbol(wrapper): [Circular],
+          },
+        },
+      },
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`listenToRateTask Saga should dispatch the GET_DATA_SUCCESS action if it requests the data successfully 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      10000,
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`listenToRateTask Saga should dispatch the GET_DATA_SUCCESS action if it requests the data successfully 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      "latest.json",
+      Object {
+        "params": URLSearchParams {
+          Symbol(impl): URLSearchParamsImpl {
+            "_list": Array [
+              Array [
+                "base",
+                "[object Object]",
+              ],
+            ],
+            "_url": null,
+            Symbol(wrapper): [Circular],
+          },
+        },
+      },
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;

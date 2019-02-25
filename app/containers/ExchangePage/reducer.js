@@ -38,7 +38,7 @@ function exchangePageReducer(state = initialState, { type, payload }) {
       return state
         .set('isLoading', false)
         .set('isError', false)
-        .set('latest', payload);
+        .set('latest', fromJS(payload));
     case C.EXCHANGE: {
       const indexFrom = state
         .get('availableCurrencies')

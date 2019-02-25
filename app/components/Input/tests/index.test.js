@@ -1,11 +1,35 @@
-// import React from 'react';
-// import { mount } from 'enzyme';
-// import { enzymeFind } from 'styled-components/test-utils';
+import React from 'react';
+import { shallow } from 'enzyme';
 
-// import Input from '../index';
+import CurrencyInput from 'react-currency-input';
+
+import Input from '../index';
 
 describe('<Input />', () => {
-  it('Expect to have unit tests specified', () => {
-    expect(true).toEqual(false);
+  it('should render a CurrencyInput', () => {
+    const renderedComponent = shallow(
+      <Input value={0} onInputChange={() => {}} />,
+    );
+    expect(renderedComponent.find(CurrencyInput)).toHaveLength(1);
+  });
+
+  it('should call onChange ', () => {
+    const onChangeSpy = jest.fn();
+    const renderedComponent = shallow(
+      <Input value={0} onInputChange={onChangeSpy} />,
+    );
+    const selectWrapper = renderedComponent.find(CurrencyInput);
+    selectWrapper.simulate('change', 1);
+    expect(onChangeSpy).toHaveBeenCalled();
+  });
+
+  it('should call onChange with negative value ', () => {
+    const onChangeSpy = jest.fn();
+    const renderedComponent = shallow(
+      <Input value={0} onInputChange={onChangeSpy} />,
+    );
+    const selectWrapper = renderedComponent.find(CurrencyInput);
+    selectWrapper.simulate('change', -1);
+    expect(onChangeSpy).toHaveBeenCalled();
   });
 });
