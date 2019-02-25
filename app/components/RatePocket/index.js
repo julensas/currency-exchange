@@ -8,7 +8,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Currency from 'components/Currency';
-import Input from 'components/Input';
+import Value from 'components/Value';
 import style from './style.scss';
 
 /* eslint-disable react/prefer-stateless-function */
@@ -24,10 +24,6 @@ class RatePocket extends React.Component {
     );
   }
 
-  onChange = val => {
-    this.props.onInputChange(val, this.props.currency);
-  };
-
   render() {
     const { currency, value, rate, baseCurrencySymbol, isLoading } = this.props;
     return (
@@ -40,11 +36,7 @@ class RatePocket extends React.Component {
           </span>
         )}
         <Currency currency={currency.code} />
-        <Input
-          name="rate"
-          value={Math.abs(value)}
-          onInputChange={this.onChange}
-        />
+        <Value value={Math.abs(value).toFixed(2)} />
       </div>
     );
   }
@@ -57,7 +49,6 @@ RatePocket.propTypes = {
   value: PropTypes.any.isRequired,
   isLoading: PropTypes.bool.isRequired,
   rate: PropTypes.number,
-  onInputChange: PropTypes.func.isRequired,
   'aria-hidden': PropTypes.string,
 };
 

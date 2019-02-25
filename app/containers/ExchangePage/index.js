@@ -44,15 +44,6 @@ export class ExchangePage extends React.Component {
 
   onInputChange = value => this.setState({ value });
 
-  onRateInputChange = (value, currency) => {
-    const {
-      exchange: {
-        latest: { rates },
-      },
-    } = this.props;
-    this.setState({ value: value / (rates[currency] || 1) });
-  };
-
   onAfterSlide = slideIndex => {
     const {
       exchange: { availableCurrencies },
@@ -135,7 +126,6 @@ export class ExchangePage extends React.Component {
                 baseCurrencySymbol={
                   availableCurrencies.find(c => c.code === base || 'USD').symbol
                 }
-                onInputChange={this.onRateInputChange}
                 value={value * (rates[currency.code] || 1)}
               />
             ))}
